@@ -3,6 +3,8 @@
 // The current commit has the bug, but a commit from several months ago does not.
 // Given a sorted list of 100 commits, write a function that returns an object
 // containing the commit and index.  Your solution must run in log(n) time.
+import Foundation
+
 
 struct Commit {
     let timestamp: Date

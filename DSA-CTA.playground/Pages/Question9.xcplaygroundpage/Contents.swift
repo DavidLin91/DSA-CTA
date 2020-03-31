@@ -16,6 +16,14 @@ class BinaryTreeNode {
    }
 }
 
+extension BinaryTreeNode {
+func inOrderTraversal(visit: (BinaryTreeNode) -> ()) {
+    left?.inOrderTraversal(visit: visit)
+    visit(self)
+    right?.inOrderTraversal(visit: visit)
+}
+}
+
 // Create nodes
 var a = BinaryTreeNode("A")
 var b = BinaryTreeNode("B")
@@ -44,6 +52,23 @@ j.right = k;
 
 h.left = g;
 h.right = i;
+
+
+f.inOrderTraversal { (node) in
+    print(node.val, terminator: " ")
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Should print
 // A
